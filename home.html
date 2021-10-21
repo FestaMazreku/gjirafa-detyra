@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Home </title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Social Media">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- javascript -->
+    <script src="javascript/api.js"></script>
+</head>
+<body>
+<div class="mt-5 mb-3 d-flex justify-content-center row">
+    <div class="card p-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="row">
+            <div class="float-start col-lg-1 col-sm-1">
+                <button class="btn2 btn-secondary"></button>
+            </div>
+            <div class="float-end pt-2 col-lg-11 col-sm-11">
+                <input type="text" class="post p-3" id="new_title" name="new_title" value="" placeholder="Posto një artikull">
+                <button id="add_btn2" class="bttn" onclick="New()">Post</button>
+                <script>
+                    function New() {
+                        var new_title = document.getElementById("new_title").value;
+                        console.log("Titulli i ri: " + new_title);
+                        fetch('https://jsonplaceholder.typicode.com/posts', {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                title: new_title,
+                            }),
+                            headers: {
+                                "Content-type": "application/json; charset=UTF-8"
+                            }
+                        })
+                            .then(response => response.json())
+                            .then(json => {
+                                console.log('Te dhenat: ' + JSON.stringify(json));
+                                alert("Artikulli i shtua me sukses! Shikoni ne console.");
+                            })
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 mb-3 d-flex justify-content-center row">
+    <div class="card p-3 col-lg-6 col-md-6 col-sm-12">
+        <div style="border-bottom: 1px solid lightgrey">
+            <div class="float-start pl-3">
+                <button class="btn2 btn-secondary"></button>
+                <div class="float-end pl-3 pt-2">
+                    <p class="name2" id="user1"></p>
+                    <p class="id2" style="margin-top: -20px" id="nick1"></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text2 pl-3 mt-3" id="title1"></p>
+        <p class="text4 pl-3" id="post1"> </p>
+        <center>
+            <input type="text" class="koment p-3" name="koment" placeholder="Komento në këtë postim">
+            <p class="text1 mt-3"> 26 komente </p>
+            <hr style="color: lightgrey">
+        </center>
+
+        <div class="float-start pl-5">
+            <p class="name2" id="email1"></p>
+            <p class="text3" id="comment1"> </p>
+            <hr style="color: lightgrey">
+        </div>
+
+        <div class="float-end pl-5">
+            <p class="name2" id="email2"></p>
+            <p class="text3" id="comment2"> </p>
+        </div>
+        <center>
+            <p class="text5 mt-1"> Shiko më shumë komente </p>
+        </center>
+    </div>
+</div>
+
+<div class="mt-5 mb-3 d-flex justify-content-center row">
+    <div class="card p-3 col-lg-6 col-md-6 col-sm-12">
+        <div style="border-bottom: 1px solid lightgrey">
+            <div class="float-start pl-3">
+                <button class="btn2 btn-secondary"></button>
+                <div class="float-end pl-3 pt-2">
+                    <p class="name2" id="user2"></p>
+                    <p class="id2" style="margin-top: -20px" id="nick2"></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text2 pl-3 mt-3" id="title2"></p>
+        <p class="text4 pl-3" id="post2"></p>
+        <center>
+            <input type="text" class="koment p-3" name="koment" placeholder="Komento në këtë postim">
+            <p class="text1 mt-3"> 26 komente </p>
+            <hr style="color: lightgrey">
+        </center>
+
+        <div class="float-start pl-5">
+            <p class="name2" id="email3"></p>
+            <p class="text3" id="comment3"> </p>
+            <hr style="color: lightgrey">
+        </div>
+
+        <div class="float-end pl-5">
+            <p class="name2" id="email4"></p>
+            <p class="text3" id="comment4"> </p>
+        </div>
+        <center>
+            <p class="text5 mt-1"> Shiko më shumë komente </p>
+        </center>
+    </div>
+</div>
+
+<div class="mt-5 mb-3 d-flex justify-content-center row">
+    <div class="card p-3 col-lg-6 col-md-6 col-sm-12">
+        <div style="border-bottom: 1px solid lightgrey">
+            <div class="float-start pl-3">
+                <button class="btn2 btn-secondary"></button>
+                <div class="float-end pl-3 pt-2">
+                    <p class="name2" id="user3"></p>
+                    <p class="id2" style="margin-top: -20px" id="nick3"></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text2 pl-3 mt-3" id="title3"></p>
+        <p class="text4 pl-3" id="post3"></p>
+        <center>
+            <input type="text" class="koment p-3" name="koment" placeholder="Komento në këtë postim">
+            <p class="text1 mt-3"> 26 komente </p>
+            <hr style="color: lightgrey">
+        </center>
+
+        <div class="float-start pl-5">
+            <p class="name2" id="email5"></p>
+            <p class="text3" id="comment5"></p>
+            <hr style="color: lightgrey">
+        </div>
+
+        <div class="float-end pl-5">
+            <p class="name2" id="email6"></p>
+            <p class="text3" id="comment6"></p>
+        </div>
+        <center>
+            <p class="text5 mt-1"> Shiko më shumë komente </p>
+        </center>
+    </div>
+</div>
+<br>
+<center>
+    <button class="button"> Shiko më shumë postime </button>
+</center>
+<br>
+<br>
+</body>
+</html>
