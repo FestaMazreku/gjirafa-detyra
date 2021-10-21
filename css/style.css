@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #efefef;
+    font-family: Calibri Light;
+    overflow-x: hidden;
+}
+
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.topnav a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 10px 80px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #ed872d;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid #ed872d;
+    color: #ed872d;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 1px 2px 1px 1px #c9c0bb;
+}
+
+.btn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    border-color: lightgray;
+    box-shadow: 1px 2px 1px #c9c0bb;
+}
+
+.btn2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #efefef;
+    border: none;
+}
+
+.button {
+    width: 300px;
+    height: 50px;
+    background-color: #e5e4e2;
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.bttn {
+    width:40px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background: transparent;
+    padding: 2px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.id {
+    font-size: 20px;
+    font-weight: 320;
+    color: lightslategray;
+}
+
+.name2 {
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.id2 {
+    font-size: 15px;
+    font-weight: 320;
+    color: lightslategray;
+}
+
+.koment {
+    width: 570px;
+    height: 37px;
+    background-color: #efefef;
+    color: gray;
+    font-size: 14px;
+    font-weight: 520;
+    border: none;
+    border-radius: 16px;
+}
+.post {
+    width: 510px;
+    height: 37px;
+    background-color: #efefef;
+    color: gray;
+    font-size: 14px;
+    font-weight: 590;
+    border: none;
+    border-radius: 16px;
+}
+
+.text {
+    font-size: 14px;
+    color: #bebebe;
+    font-weight: bold;
+}
+
+.text1 {
+    font-size: 14px;
+    color: grey;
+    font-weight: bolder;
+}
+
+.text2 {
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+}
+
+.text3 {
+    font-size: 14px;
+    color: grey;
+    font-weight: 530;
+}
+
+.text4 {
+    font-size: 15px;
+    color: grey;
+    font-weight: 530;
+}
+
+.text5 {
+    font-size: 14px;
+    color: #ed872d;
+    font-weight: bold;
+}
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:800px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:1024px) {
+    html {
+        font-size: 55%;
+    }
+}
